@@ -3,3 +3,6 @@ makefile
 
 # vs code extentions
 .vscode
+
+# files for testing
+*-main.c
