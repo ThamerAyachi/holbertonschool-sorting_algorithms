@@ -29,6 +29,7 @@ void selection_sort(int *array, size_t size)
 
 	for (i = 0; i < size - 1; i++)
 	{
+		flag = 0;
 		tmp = i;
 		for (j = i; j < size; j++)
 		{
