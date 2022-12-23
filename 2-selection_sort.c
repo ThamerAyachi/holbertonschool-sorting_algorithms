@@ -22,7 +22,10 @@ void swap(int *array, int x, int y)
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t i, j, tmp;
+	size_t i, j, tmp, flag = 0;
+
+	if (size == 0)
+		return;
 
 	for (i = 0; i < size - 1; i++)
 	{
@@ -30,9 +33,13 @@ void selection_sort(int *array, size_t size)
 		for (j = i; j < size; j++)
 		{
 			if (array[tmp] > array[j])
+			{
 				tmp = j;
+				flag++;
+			}
 		}
 		swap(array, tmp, i);
-		print_array(array, size);
+		if (flag != 0)
+			print_array(array, size);
 	}
 }
